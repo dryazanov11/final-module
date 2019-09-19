@@ -7,9 +7,9 @@ class BasePage():
 		self.url = url
 	def open(self):
 		self.browser.get(self.url)
-	def is_element_present(self, find_element_by_css_selector, login_link_invalid):
+	def is_element_present(self, find_element_by_css_selector, login_link):
 		try:
-			self.browser.find_element(find_element_by_css_selector, login_link_invalid)
+			self.browser.find_element(find_element_by_css_selector, login_link)
 		except (NoSuchElementException):
 			return False
 		return True
